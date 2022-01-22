@@ -71,7 +71,7 @@ def finetune(model, train_loader, epoch):
         if batch_i % 5 == 0:
             print('epoch: {}, epoch progress: ({}/{} ({:.0f}%)) \tloss: {:.6f}'
                   .format(epoch, batch_i * len(data), len(train_loader.dataset),
-                          100. * batch_i / len(train_loader), loss.data[0]))
+                          100. * batch_i / len(train_loader), loss.item())
 
 
 #finetune model just by running this script
